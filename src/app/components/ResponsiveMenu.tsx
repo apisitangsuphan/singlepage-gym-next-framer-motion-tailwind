@@ -14,9 +14,9 @@ function ResponsiveMenu({ open }: ResponsiveProps) {
             animate={{ opacity: 1,y:0}}
             exit={{ opacity: 0, y:-100}}
             transition={{  duration: 0.3 }}
-            className='fixed top-20 w-full h-screen z-20'
+            className='fixed top-20 w-full left-0 h-screen z-20'
           >
-            <div className="text-xl font-semibold bg-primary text-white py-5 my-6 rounded-3xl">
+            <div className="text-xl font-semibold bg-primary text-white py-5 m-6 rounded-3xl">
                 <ul className="flex flex-col justify-center items-center gap-3">
               <li>
                 <Link href="/">Home</Link>
