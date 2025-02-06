@@ -1,15 +1,10 @@
 import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { NavbarMenu } from "../mockData/data";
 
 interface ResponsiveProps {
     open: boolean
 }
-interface NavbarMenu {
-    id: number;
-    title: string;
-    link: string;
-}
+
 function ResponsiveMenu({ open }: ResponsiveProps) {
   return (
     <AnimatePresence>

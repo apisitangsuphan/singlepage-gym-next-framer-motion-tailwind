@@ -8,17 +8,14 @@ import { CiSearch } from "react-icons/ci";
 import { FaDumbbell } from "react-icons/fa";
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCartThin } from "react-icons/pi";
-import { li } from "motion/react-client";
+
 
 interface NavbarMenu {
   id: number;
   title: string;
   link: string;
 }
-interface ResponsiveProps {
-    open: boolean;
- 
-}
+
 
 function Navbar() {
     const [open, setOpen] = useState(false);
