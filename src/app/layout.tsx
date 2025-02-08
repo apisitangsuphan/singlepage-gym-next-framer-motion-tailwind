@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import BgImage from '../../public/assets/BgImage.png'
 
 import Navbar from "./components/Navbar";
 
+const bgStyle = {
+  backfroundImage:`url(${BgImage})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backfrounAttrachment:'fixed'
+
+
+}
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,8 +39,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        <div style={bgStyle}>
+          <Navbar />
         {children}
+        </div>
+        
       </body>
     </html>
   );

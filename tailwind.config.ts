@@ -7,7 +7,12 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {colors:{
+    extend: {
+      
+      fontFamily:{
+        sans:['Playfair Display', 'serif'],
+      },
+      colors:{
       primary:"#ff8901",
       secondary:"#fb923c"
     },
