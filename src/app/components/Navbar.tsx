@@ -1,5 +1,6 @@
 'use client'
 import React,{useState} from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { NavbarMenu } from "../mockData/data";
 import ResponsiveMenu from "./ResponsiveMenu";
@@ -19,7 +20,7 @@ interface NavbarMenu {
 
 function Navbar() {
     const [open, setOpen] = useState(false);
-
+    const pathname = usePathname();
   return (
     <nav className="bg-slate-50 shadow-md ">
       <div className="container flex justify-between items-center py-8">
@@ -36,7 +37,7 @@ function Navbar() {
           <ul className="flex items-center gap-5 font-bold">
             {NavbarMenu.map((item: NavbarMenu) => {
               return (
-                <li key={item.id} className="hover:text-primary">
+                <li key={item.id} className={`hover:text-primary ${pathname === item.link? "text-primary" : ""}`}>
                   <Link href={item.link}>{item.title}</Link>
                 </li>
               );
