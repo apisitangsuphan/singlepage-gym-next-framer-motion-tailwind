@@ -6,20 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {SlideLeft} from "@/app/Utility/animation";
 
-interface SlideVariants {
-  hidden: {
-    opacity: number;
-    y: number;
-  };
-  visible: {
-    opacity: number;
-    y: number;
-    transition: {
-      duration: number;
-      delay: number;
-    };
-  };
-}
+
 
 function Hero() {
   return (
