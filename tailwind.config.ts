@@ -8,9 +8,8 @@ export default {
   ],
   theme: {
     extend: {
-      
       fontFamily:{
-        sans:['Playfair Display', 'serif'],
+        playfair:['Playfair Display', 'serif'],
       },
       colors:{
       primary:"#ff8901",
