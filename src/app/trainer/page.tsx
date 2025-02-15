@@ -10,7 +10,7 @@ interface DataUser {
   email: string;
   avatar: string;
 }
-function trainer() {
+function Trainer() {
   const [dataTrainerPerson, setDataTrainerPerson] = useState<DataUser[]>([]);
 
   const trainerData = async () => {
@@ -18,13 +18,13 @@ function trainer() {
       const res = await axios.get(`https://www.melivecode.com/api/users/`);
       setDataTrainerPerson(res.data);
       console.log(dataTrainerPerson);
-    } catch (err: any) {
-      throw new Error("Cant Fetch Trainer Data from API using Axios :",err);
+    } catch (error: any) {
+      throw new Error("Cant Fetch Trainer Data from API using Axios",error);
     }
   };
   useEffect(() => {
     trainerData();
-  }, []);
+  }, [trainerData]);
   return (
     <div className="container mt-10 mx-auto">
       <h1 className="text-4xl">Trainer Data</h1>
@@ -54,4 +54,4 @@ function trainer() {
   );
 }
 
-export default trainer;
+export default Trainer;
