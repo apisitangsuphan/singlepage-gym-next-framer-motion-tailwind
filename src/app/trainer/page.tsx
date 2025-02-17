@@ -19,7 +19,7 @@ function Trainer() {
       setDataTrainerPerson(res.data);
       console.log(dataTrainerPerson);
     } catch (error:unknown) {
-      throw new Error("Cant Fetch Trainer Data from API using Axios");
+      throw new Error("Cant Fetch Trainer Data from API using Axios : "+error);
     }
   };
   useEffect(() => {
