@@ -18,13 +18,13 @@ function Trainer() {
       const res = await axios.get(`https://www.melivecode.com/api/users/`);
       setDataTrainerPerson(res.data);
       console.log(dataTrainerPerson);
-    } catch (error: any) {
-      throw new Error("Cant Fetch Trainer Data from API using Axios",error);
+    } catch (error:unknown) {
+      throw new Error("Cant Fetch Trainer Data from API using Axios");
     }
   };
   useEffect(() => {
     trainerData();
-  }, [trainerData]);
+  }, []);
   return (
     <div className="container mt-10 mx-auto">
       <h1 className="text-4xl">Trainer Data</h1>
@@ -32,16 +32,16 @@ function Trainer() {
         {dataTrainerPerson?.map((item: DataUser, index: number) => (
           <div
             key={index}
-            className="flex justify-center sm:flex-cols-1 sm:block items-center space-x-2 border-2 rounded-3xl bg-primary/90"
+            className="flex justify-between sm:justify-center sm:flex-cols-1 sm:block items-center sm:space-x-2 border-2 rounded-3xl  overflow-hidden bg-primary/90"
           >
             <img
-              className="w-[80%] h-[80%] rounded-sm p-10 mx-auto"
+              className={"w-[40%] py-3 ml-[-15px] sm:w-[80%] sm:h-[80%] rounded-sm sm:p-10 mx-auto overflow-hidden"}
               
               src={item.avatar}
               alt={item.username}
             />
-            <div className=" pb-10 px-10">
-              <h2 className="text-xl font-semibold">
+            <div className=" sm:pb-10 sm:px-10 ">
+              <h2 className="text-xl font-semibold overflow-none p-2">
                 {item.fname} {item.lname}
               </h2>
               <p>{item.username}</p>
