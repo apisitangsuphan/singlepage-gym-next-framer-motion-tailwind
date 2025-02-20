@@ -17,7 +17,7 @@ function Programs() {
   
   }, []);
   return (
-    <div className='container my-10'>Hi</div>
+    <div className='container my-10'>Coming Soon</div>
   )
 }
 
